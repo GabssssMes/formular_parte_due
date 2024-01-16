@@ -9,7 +9,7 @@ const fs = require("fs");
 dotenv.config();
 
 const PORT = process.env.PORT || 8000;
-const buildPath = path.join(__dirname, "../Frontend/build/");
+const buildPath = path.join(__dirname, "../frontend/build/");
 
 app.use(express.static(buildPath));
 app.use(express.json());
