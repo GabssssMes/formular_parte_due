@@ -76,9 +76,9 @@ function App() {
       setFile("");
       return;
     }
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadFile";
-    //const url = "https://erstelledocs.onrender.com/uploadFile";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadFile";
+    const url = "https://test-parte-2.onrender.com/uploadFile";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -141,9 +141,9 @@ function App() {
     }
 
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadAusweis";
-    //const url = "https://erstelledocs.onrender.com/uploadAusweis";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadAusweis";
+    const url = "https://test-parte-2.onrender.com/uploadAusweis";
 
     const formData = new FormData();
     formData.append("file", fileToUse);
@@ -208,9 +208,9 @@ function App() {
       return;
     }
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadStromrechnung";
-    //const url = "https://erstelledocs.onrender.com/uploadStromrechnung";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadStromrechnung";
+    const url = "https://test-parte-2.onrender.com/uploadStromrechnung";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -274,10 +274,10 @@ function App() {
       return;
     }
     event.preventDefault();
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/uploadKataster";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/uploadKataster";
 
-    //const url = "https://erstelledocs.onrender.com/uploadKataster";
+    const url = "https://test-parte-2.onrender.com/uploadKataster";
     const formData = new FormData();
     formData.append("file", fileToUse);
     formData.append("fileName", fileToUse.name);
@@ -434,10 +434,10 @@ function App() {
       Stromrechnung,
       Kataster,
     };
-    const PORT = process.env.PORT || 8000;
-    const url = "http://localhost:" + PORT + "/createPdf";
+    //const PORT = process.env.PORT || 8000;
+    //const url = "http://localhost:" + PORT + "/createPdf";
 
-    //const url = "https://erstelledocs.onrender.com/createPdf";
+    const url = "https://test-parte-2.onrender.com/createPdf";
 
     axios
       .post(url, data)
