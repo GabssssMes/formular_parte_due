@@ -1,6 +1,7 @@
 import uniqid from "uniqid";
 
-let PVData = [],
+let PVData = [];
+/*
   PersonalData = [],
   PVLocation = [];
 
@@ -207,5 +208,30 @@ let bill = {
 let Cadastral = {
   filename: [],
 };
+*/
+PVData["Vorname"] = {
+  type: "text",
+  key: uniqid(),
+  content: "",
+  required: true,
+};
+PVData["Nachname"] = {
+  type: "text",
+  key: uniqid(),
+  content: "",
+  required: true,
+};
+PVData["Bauende"] = {
+  type: "date",
+  key: uniqid(),
+  content: "",
+  required: true,
+};
+let Konform = {
+  filename: [],
+};
+let Spiii = {
+  filename: [],
+};
 
-export { PVData, PersonalData, PVLocation, Signature, id, bill, Cadastral };
+export { PVData, Konform, Spiii };

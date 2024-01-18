@@ -24,10 +24,10 @@ const DataField = (props) => {
             name={props.name}
             value={props.value}
             onChange={props.onChange}
-            onInvalid={handleInvalid}
-            onInput={test}
             maxLength={props.maxlength}
             className={style.inputfield}
+            onInput={test}
+            onInvalid={handleInvalid}
             required
           ></input>
         </div>

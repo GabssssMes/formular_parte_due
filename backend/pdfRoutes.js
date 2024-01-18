@@ -1,11 +1,5 @@
 const express = require("express");
-const {
-  createPdf,
-  uploadFile,
-  uploadAusweis,
-  uploadStromrechnung,
-  uploadKataster,
-} = require("./pdfController");
+const { sendData, uploadFile, uploadSpi } = require("./pdfController");
 const pdfRoute = express.Router();
 const multer = require("multer");
 
@@ -33,7 +27,7 @@ pdfRoute.post("/uploadFile", upload.single("file"), uploadFile); // to upload Un
 //});
 //upload = multer({ storage });
 
-pdfRoute.post("/uploadAusweis", upload.single("file"), uploadAusweis); // to upload Ausweis
+pdfRoute.post("/uploadSpi", upload.single("file"), uploadSpi); // to upload SPI
 
 /*storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -43,7 +37,7 @@ pdfRoute.post("/uploadAusweis", upload.single("file"), uploadAusweis); // to upl
     return cb(null, `${Date.now()}_${file.originalname}`);
   },
 });
-upload = multer({ storage });*/
+upload = multer({ storage });
 
 pdfRoute.post(
   "/uploadStromrechnung",
@@ -51,7 +45,7 @@ pdfRoute.post(
   uploadStromrechnung
 ); // to upload Stromrechnung
 
-/*storage = multer.diskStorage({
+storage = multer.diskStorage({
   destination: function (req, file, cb) {
     return cb(null, "./Documents/Cadastral");
   },
@@ -59,10 +53,10 @@ pdfRoute.post(
     return cb(null, `${Date.now()}_${file.originalname}`);
   },
 });
-upload = multer({ storage });*/
+upload = multer({ storage });
 
 pdfRoute.post("/uploadKataster", upload.single("file"), uploadKataster); // to upload Katasterauszug
-
-pdfRoute.post("/createPdf", createPdf); // to generate pdf
+*/
+pdfRoute.post("/sendData", sendData); // to send Data
 
 module.exports = pdfRoute;
